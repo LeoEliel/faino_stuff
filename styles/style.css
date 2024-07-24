@@ -12,5 +12,33 @@ html, body {
     padding: 1em;
     position: absolute;
     background-color: aquamarine;
-    min-width: 100vw;
+    min-width: 85vw;
+    font-size: 2em;
+    text-align: center;
+}
+
+header, footer {
+    background-color: black;
+    color: aliceblue;
+}
+
+@media screen and (min-device-width:420px) {
+    
+    .logo{ grid-area: logo; }
+    .titulo{ grid-area: titulo;}
+    .nav{ grid-area: nav;}
+    .texto{ grid-area: texto;}
+    .box1{ grid-area: box1;}
+    .box2{ grid-area: box2;}
+    .box3{ grid-area: box3;}
+    .footer{ grid-area: footer;}
+}
+
+.container{
+    grid-template-areas:
+    'logo logo titulo titulo titulo titulo'
+    'nav nav nav nav nav nav'
+    'texto texto texto texto'
+    'box1 box1 box2 box2 box3 box3'
+    'foot foot foot foot foot foot';
 }
