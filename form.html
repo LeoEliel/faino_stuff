@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Aula Formulário</title>
+	</head>
+	<body>
+		<form>
+			<input type="text" id="nome" name="telefone" placeholder="Digite seu telefone" size="50"><br><br>
+			<input id="senha" type="password" placeholder="Senha aqui...">
+			<input type="text" placeholder="(99)99999-9999" pattern="\(\d{2}\)\d{4}-\d{4}" />
+			<br><br>
+			<label>Aperitivo? <input type="checkbox" checked="checked"></label>
+			<fieldset>
+			<legend>Sexo:</legend>
+				<label for="masc">Masculino:</label><input type="radio" name="sexo" value="M" id="masc">
+				<label for="fem">Feminino:</label><input type="radio" name="sexo" value="F" id="fem" checked="checked">
+			</fieldset>
+			<br>
+			<label>Escreva uma mensagem:<br>
+			<textarea name="mensagem" rows="10" cols="80">O que estiver aqui aparece dentro do campo</textarea></label>
+			<fieldset>
+				<legend>Estado:</legend>
+				<select name="estado">
+					<option value="" selected disabled>Selecione</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA" selected>Bahia</option>
+				</select>
+			
+			</fieldset>
+			<br>
+			<input type="number" min="0" max=100 step="2">
+		</form>
+		<p id="texto"></p>
+
+		<script>
+			texto.textContent = 'O nome deve ter mais de 5 caracteres';
+			nome.onkeyup = function(){
+				if(nome.value.length <= 5){
+					texto.textContent = 'Nome inválido';
+				}else {
+					texto.textContent = 'Nome ok.'
+					nome.style.backgroundColor = 'lightGreen';
+				}
+			}
+	
+			let minhasenha = document.querySelector('#senha')
+	
+			minhasenha.onkeydown = function(event){
+				let letrasmin = false;
+				let letrasmai = false;
+				let num = false;
+				let simb = false;
+	
+				if(!letrasmin){
+					if (event.keyCode >= 97 && event.keyCode <= 122) {
+						letrasmin = true;
+					}
+				}
+				if(!letrasmai){
+					if (event.keyCode >= 65 && event.keyCode <= 90) {
+						letrasmai = true;
+					}
+				}
+				if(!num){
+					if (event.keyCode >= 48 && event.keyCode <= 57) {
+						num = true;
+					}
+				}
+				if(!simb){
+					if 
+					(
+						(event.keyCode >= 32 && event.keyCode <= 47) ||
+						(event.keyCode >= 58 && event.keyCode <= 64) ||
+						(event.keyCode >= 91 && event.keyCode <= 96) ||
+						(event.keyCode >= 123 && event.keyCode <= 128)
+					) 
+					{
+						simb = true;
+					}
+				}
+				if (letrasmin && letrasmai && num && simb) {
+					minhasenha.style.borderColor = 'green';
+				}else{
+					minhasenha.style.borderColor = 'red';
+				}
+			}
+
+			var aperitivo = document.getElementById('aperit');
+
+			aperitivo.onclick = function(){
+
+				var corpo = document.body;
+
+				if (aperitivo.checked) {
+					corpo.style.backgroundColor = "black";	
+					corpo.style.color = "white";	
+				}else{
+					corpo.style.backgroundColor = "white";
+					corpo.style.color = "black";
+				}
+			}
+			let opcoes = document.getElementsByName('sexo')
+			
+			function verSexo() {
+				if (opcoes[0].checked) {
+					alert('Olá Senhor!!!!')
+				} else if(opcoes[1].checked){
+					alert('Olá Senhora!!!!')
+				}
+			}
+
+			verSexo();
+			opcoes[0].onclick = verSexo();
+			opcoes[1].onclick = verSexo();
+		</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+

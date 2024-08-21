@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2 Javascript</title>
+</head>
+<body>
+
+    <button id="botao">Click-me</button>
+
+    <div id ="section"></div>
+
+    <script>
+         //var meubotao = document.querySelector('button');
+         //var meubotao = document.getElementById('botao');
+        var meubotao = botao;
+        meubotao.onclick = function() {
+            var nome = prompt('Informe seu nome: ');
+            let idade = prompt('Informe sua idade: ');
+            //alert("Olá " + nome +"  é um prazer te ver!");
+            section.innerHTML = ' ';
+            const para1 = document.createElement('p');
+            para1.textContent = ("Olá " + nome +"  é um prazer te ver!");
+            const para2 = document.createElement('p');
+            para2.textContent = "Sua idade é: " + idade;
+            section.appenChild(para1);
+            section.appenChild(para2);
+            section.style.backgroundColor = "black";
+            section.style.color = "white";  
+        }
+
+    </script>
+
+</body>
+</html>
