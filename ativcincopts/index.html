@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form">
+        <fieldset>
+            <div>
+                <label for="prova1">prova 1</label>
+                <input type="number" name="prova1" id="prova1">
+                <br>
+                <label for="prova2">prova 2</label>
+                <input type="number" name="prova2" id="prova2">
+                <br><br>
+            </div>
+            <div>
+                <input type="radio" id="mediaa" value="mediaa" name="avg" checked />
+                <label for="mediaa">Media Aritimética</label>
+                
+                <input type="radio" id="mediap" value="mediap" name="avg"/>
+                <label for="mediap">Media Ponderada</label>
+                <br><br>
+            </div>
+
+            <div>
+                <input type="submit" id="go" value="calcular">
+                <input type="button" value="limpar">
+            </div>
+        </fieldset>
+    </form>
+
+    <p id="result"></p>
+
+</body>
+</html>
