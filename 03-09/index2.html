@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/exmplo2.css">
+    <title>EX 2 Formulário</title>
+</head>
+<body>
+    <main>
+        <form>
+			<input type="text" name="telefone" placeholder="Digite seu telefone" size="50"><br><br>
+			<input type="password" placeholder="Senha aqui..." name="senha">
+			<input type="text" placeholder="(99)99999-9999" pattern="\(\d{2}\)\d{4}-\d{4}" name="telefone"/>
+			<br><br>
+			<label>Aperitivo? <input type="checkbox" checked="checked"></label>
+			<fieldset>
+			<legend>Sexo:</legend>
+				<label for="masc">Masculino:</label><input type="radio" name="sexo" value="M" id="masc">
+				<label for="fem">Feminino:</label><input type="radio" name="sexo" value="F" id="fem">
+			</fieldset>
+			<br>
+			<label>Escreva uma mensagem:<br>
+			<textarea name="mensagem" rows="10" cols="80">O que estiver aqui aparece dentro do campo</textarea></label>
+			<fieldset>
+				<legend>Estado:</legend>
+				<select name="estado">
+					<option value="" selected disabled>Selecione</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA" >Bahia</option>
+				</select>
+			
+			</fieldset>
+			<br>
+			<input type="number" name="numero" min="0" max=100 step="2">
+
+            <button type="submit">Enviar</button>
+		</form>
+    </main>
+    <script src="scripts/exemplo2.js"></script>
+</body>
+</html>
