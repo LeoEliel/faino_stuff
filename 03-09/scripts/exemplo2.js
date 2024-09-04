@@ -7,6 +7,8 @@ function verificaMarca() {
             marcado = true;
         }
     });
+    let mens = marcado ? "" : "Informar Sexo";
+    alert(mens);
     return marcado;
 }
 
