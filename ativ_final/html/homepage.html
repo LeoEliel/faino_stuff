@@ -3,20 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/style_homepage.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/form.css">
         <title>leoeliel - Homepage</title>
     </head>
     <body>
         <div>
 
             <header>
+                <figure>
 
-                <h1>This is Leo Eliel</h1>
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHwAekGa8Tm4w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711896950851?e=1731542400&v=beta&t=5QETVwDit-7lZA04o_DQ6KZZ608C-ERo-lEUwL56EFY" alt="Foto do meu rosto">
+                    <figcaption>This is Leo Eliel<figcaption/>
+                </figure>
             </header>
 
             <section>
 
-                <h2>Sobre mim</h2>
+                <h1>Sobre mim</h1>
 
                 <article>
 
@@ -29,7 +33,7 @@
 
             <section>
 
-                <h2>De onde venho</h2>
+                <h2>De onde vim</h2>
 
                 <article>
 
@@ -37,6 +41,7 @@
                     Ab sequi molestiae voluptates quisquam itaque quia 
                     facilis iste aperiam, fugit labore voluptate alias
                     fuga, blanditiis esse aliquam rerum a qui quasi!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum pariatur ipsa reiciendis quibusdam modi expedita natus laborum eum rerum delectus blanditiis necessitatibus corrupti culpa iusto, quae quidem hic esse nulla eligendi, officiis fuga quos minus ab! Aliquam error, deserunt voluptates nam quo ullam, aperiam provident corrupti accusantium animi fuga id itaque. Quam odit in voluptate dolorum laudantium eligendi harum ad accusamus possimus ut? Veniam vero rerum perferendis molestiae unde ipsum.
                 </article>
             </section>
             <section>
@@ -49,6 +54,7 @@
                     Ab sequi molestiae voluptates quisquam itaque quia 
                     facilis iste aperiam, fugit labore voluptate alias
                     fuga, blanditiis esse aliquam rerum a qui quasi!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut placeat, odit ea itaque quod architecto quam corrupti quae reiciendis minima id blanditiis, nisi debitis voluptatum eum modi officiis iusto! Facilis ipsam unde atque commodi dolor maiores eius laudantium obcaecati adipisci odit? Odio maxime ratione necessitatibus optio et, dolorem illo cumque dignissimos incidunt quia! Cum unde veritatis suscipit tenetur dolore modi eveniet ullam, deserunt, nihil sapiente ipsa pariatur ea, nostrum molestiae?
                 </article>
             </section>
 
@@ -62,26 +68,28 @@
                     Ab sequi molestiae voluptates quisquam itaque quia 
                     facilis iste aperiam, fugit labore voluptate alias
                     fuga, blanditiis esse aliquam rerum a qui quasi!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus corporis ipsam, aperiam iste debitis explicabo aspernatur eius reprehenderit deserunt autem culpa quos totam nam excepturi molestiae. Sint ea fugiat officiis corrupti natus, delectus rerum deserunt amet, facilis consequuntur sunt nihil adipisci aut accusamus quas quasi iure rem commodi culpa omnis eos libero maxime? Blanditiis sint sequi quae quibusdam optio perspiciatis non necessitatibus dicta, reiciendis minus. Corrupti culpa rerum voluptates quidem?
                 </article>
             </section>
 
-            <form action="post" class="flex-container">
+            <form action="post" class="flex-form">
 
                 <fieldset>                        
                     <legend>Entre em contato comigo!</legend>
 
                     <!-- <label for="name">Nome</label> -->
-                    <input type="text" name="name" placeholder="Seu nome por favor">
-                    <!-- <label for="tel">Celular</label> -->
-                    <input type="number" name="tel" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="Deixe seu contato" required>
+                    <input type="text" id="name" name="name" placeholder="Seu nome por favor">
+                    <!-- <label for="phone">Celular</label> -->
+                    <input type="tel" id="phone" name="phone" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" placeholder="Deixe seu contato" required>
                     <!-- <label for="message">Deixe vossa mensagem</label> -->
-                    <input type="textarea" name="message" placeholder="Deixe vossa mensagem">
+                    <input type="textarea" rows="10" cols="10" maxlength="100" id="message" name="message" placeholder="Deixe vossa mensagem">
                     <!-- <label for="messagedate">Data da mensagem</label> -->
-                    <input type="date" name="today" readonly>
+                    <input type="date" id="date" name="date" readonly>
                     
                     <input type="submit" value="Vai!">
                 </fieldset>
             </form>
         </div>
+        <script src="../js/index.js"></script>
     </body>
 </html>
